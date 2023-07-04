@@ -65,7 +65,9 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-  { kernel_release, "^c#f6c634^  Debian %s  ", NULL },
+//{ kernel_release, "^c#f6c634^  Debian %s  ", NULL },
+  { netspeed_rx, "^c#53b1b1^  [ down : %s ] ", "interface name (wlp3s0)"},
+  { uptime, "^c#53b1b1^  [ UpTime : %s ] ",NULL },
   { run_command, "^c#53b1b1^  [ Updates : %s ] ",  "aptitude search '~U' | wc -l" },
 	{ cpu_perc, "^c#53b1b1^ [ CPU %s%%  ]", 	NULL },
 	{ ram_perc, "^c#53b1b1^  [ RAM %s%%  ]",	 NULL },
