@@ -66,7 +66,10 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 //{ kernel_release, "^c#f6c634^  Debian %s  ", NULL },
-  { netspeed_rx, "^c#53b1b1^  [ down : %s ] ", "interface name (wlp3s0)"},
+//"pgrep -c -u $USER"
+//<span color="#CC9393">${wlp3s0 down_kb}</span> ↓ <span color="#7F9F7F">${wlp3s0 up_kb}</span> ↑'
+  { netspeed_rx, "^c#CC9393^  [ ↓ : %s ] ", "wlp3s0"},
+  { netspeed_tx, "^c#7F9F7F^  [ ↑: %s ] ", "wlp3s0"},
   { uptime, "^c#53b1b1^  [ UpTime : %s ] ",NULL },
   { run_command, "^c#53b1b1^  [ Updates : %s ] ",  "aptitude search '~U' | wc -l" },
 	{ cpu_perc, "^c#53b1b1^ [ CPU %s%%  ]", 	NULL },
